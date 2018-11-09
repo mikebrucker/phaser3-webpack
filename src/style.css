@@ -1,0 +1,13 @@
+body {
+    background: url('./assets/images/phaser-logo.png');
+    text-align: center;
+}
+
+#hello {
+    font-size: 32px;
+    color: crimson;
+}
+
+img {
+    display: block;
+}
