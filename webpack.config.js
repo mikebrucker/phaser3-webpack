@@ -32,15 +32,6 @@ module.exports = {
 				]
 			},
 			{
-				test: /\.(png|svg|jpg|gif)$/,
-				use: [{
-					loader: 'file-loader',
-					options: {
-						outputPath: 'images/'
-					}
-				}]
-			},
-			{
 				test: /\.js$/,
 				include: path.resolve(__dirname, 'src/', 'src/scenes'),
 				use: {
@@ -49,12 +40,21 @@ module.exports = {
 						presets: ['env']
 					}
 				}
-			}
+			},
+			{
+				test: /\.(png|svg|jpg|gif)$/,
+				use: [{
+					loader: 'file-loader',
+					options: {
+						outputPath: 'assets/images/'
+					}
+				}]
+			},
 		]
 	},
 	output: {
 		filename: '[name].bundle.js',
-		path: path.resolve(__dirname, 'dist')
+		path: path.resolve(__dirname, 'dist/')
 	},
 	mode: 'development'
 };
