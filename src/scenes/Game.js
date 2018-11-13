@@ -5,7 +5,10 @@ class Game extends Phaser.Scene {
     }
 
     create() {
-        this.add.image(400, 300, 'phaser_logo');
+        let logo = this.physics.add.sprite(400, 300, 'phaser_logo');
+        logo.setCollideWorldBounds(true)
+            .setBounce(1)
+            .setVelocity(80, 80);
     }
 }
 
