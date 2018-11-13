@@ -5,6 +5,8 @@ class Game extends Phaser.Scene {
     }
 
     create() {
+        this.scene.launch('HUDisplay');
+        
         let logo = this.physics.add.sprite(400, 300, 'phaser_logo');
         logo.setCollideWorldBounds(true)
             .setBounce(1)
