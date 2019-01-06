@@ -2,3 +2,8 @@ dist/
 node_modules/
 
 **/.DS_Store
+
+#firebase
+.firebase/
+.firebaserc
+firebase.json
